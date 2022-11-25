@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/listings.html">All listings</a></li>
+                <li><a href="/createlisting.html">Create listing</a></li>
+                <li><a href="/aboutus.html">About us</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+
+        <h1>Create a new listing</h1>
+
+        <form id="create">
+            <label for="address">Address</label><br>
+            <input type="text" name="address"><br><br>
+
+            <label for="date">Open house date</label><br>
+            <input type="date" name="date"><br><br>
+
+            <label for="description">Description</label><br>
+            <textarea name="description" id="description" cols="30" rows="10"></textarea><br><br>
+
+            <label for="pictures">Pictures</label><br>
+            <input type="file" name="pictures" accept="image/png, image/jpeg" multiple><br><br>
+
+            <label for="type">Property type</label><br>
+            <select name="type">
+                <option value="house">House</option>
+                <option value="apartment">Apartment</option>
+                <option value="terraced-house">Terraced house</option>
+            </select><br><br>
+
+            <input type="submit" value="Create">
+        </form>
+    </main>
+</body>
+</html>

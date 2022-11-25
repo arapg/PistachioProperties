@@ -1,0 +1,311 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Roboto+Slab:wght@400;600&family=Varela+Round&display=swap");
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #fdfaf6;
+  color: #24231f;
+  font-family: Verdana;
+}
+
+a {
+  color: rgb(109, 146, 125);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(187, 219, 226);
+}
+
+.sidebar {
+  position: fixed;
+  width: 20%;
+  height: 100vh;
+  font-size: 1.2rem;
+  font-family: "Varela Round", sans-serif;
+  text-transform: lowercase;
+  z-index: 50;
+}
+.sidebar nav {
+  text-align: right;
+  position: absolute;
+  bottom: 70px;
+  right: 50px;
+}
+.sidebar nav ul {
+  list-style: none;
+}
+.sidebar nav ul li {
+  padding: 10px;
+}
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: #24231f;
+}
+.sidebar nav ul li a:hover {
+  cursor: pointer;
+  color: #555;
+}
+
+main {
+  width: 80%;
+  margin-left: 20%;
+}
+main #header {
+  width: 80%;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+}
+main h1 {
+  width: 80%;
+  font-size: 5rem;
+  font-family: "Roboto";
+  text-align: center;
+}
+main .container {
+  max-width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  margin-bottom: 4rem;
+}
+main .container .card {
+  width: 100%;
+}
+main .container .card h3 {
+  font-size: 1.4rem;
+  margin: 10px 0;
+  font-family: "Outfit", sans-serif;
+}
+main .container .card .card-header {
+  background-color: white;
+  border-radius: 10px 10px 0 0;
+  height: 250px;
+}
+main .container .card .card-header img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+main .container .card .card-body {
+  background-color: white;
+  padding: 10px;
+}
+main .container .card .card-body p {
+  margin-top: -7px;
+}
+main .container .card .tag {
+  padding: 2px 7px;
+  border-radius: 50px;
+  color: white;
+  font-size: 0.9rem;
+}
+main .container .card .tag-house {
+  background: #cad7ac;
+}
+main .container .card .tag-terraced {
+  background: #eabe97;
+}
+main .container .card .tag-apartment {
+  background: #bbd2e2;
+}
+main .container .card .price {
+  background: #bdd6d2;
+  padding: 10px;
+  text-align: center;
+  font-weight: 600;
+  color: #647781;
+  border-radius: 0 0 10px 10px;
+}
+main .container .card .accordion {
+  background: white;
+  font-family: Verdana;
+  color: #24231f;
+  padding: 10px 0;
+  font-size: 1rem;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+main .container .card .accordion::after {
+  content: "+";
+  float: right;
+}
+main .container .card .active, main .container .card .accordion:hover {
+  cursor: pointer;
+}
+main .container .card .active::after {
+  content: "–";
+  float: right;
+}
+main .container .card .panel {
+  padding: 0 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+main #create {
+  background: white;
+  width: 80%;
+  padding: 50px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 4rem;
+}
+main #create input, main #create textarea, main #create input[file] {
+  width: calc(100% - 40px);
+  padding: 15px;
+  margin-top: 10px;
+  border: none;
+  background: #f6f6f6;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: Verdana;
+  color: #24231f;
+}
+main #create select {
+  width: calc(100% - 10px);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #f6f6f6;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-family: Verdana;
+  color: #24231f;
+}
+main #create input[type=submit] {
+  background: #cad7ac;
+  width: auto;
+  padding: 15px 50px;
+}
+main #create input[type=submit]:hover {
+  cursor: pointer;
+  background: #dbeab7;
+}
+main #about {
+  width: 80%;
+  text-align: justify;
+  font-size: 1.2rem;
+  margin-bottom: 5rem;
+}
+main #about h2 {
+  text-align: center;
+}
+main #about .team, main #about .ceo {
+  width: 100%;
+  border-radius: 10px;
+}
+main #about h5 {
+  font-size: 1.5rem;
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+main #about #contact {
+  background: white;
+  width: 50%;
+  margin: auto;
+  padding: 40px;
+  border-radius: 10px;
+}
+main #about #contact input, main #about #contact textarea {
+  width: calc(100% - 30px);
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  background: #f6f6f6;
+  font-size: 1rem;
+}
+main #about #contact input[type=submit] {
+  background-color: #cad7ac;
+  width: auto;
+  padding: 15px 50px;
+  cursor: pointer;
+}
+main #about #thank-you {
+  background: white;
+  width: 50%;
+  margin: auto;
+  padding: 40px;
+  border-radius: 10px;
+  display: none;
+}
+main #listing {
+  width: 80%;
+  font-size: 1.2rem;
+}
+main #listing h1 {
+  width: 100%;
+  margin: 30px 30px 30px 0;
+}
+main #listing #property {
+  max-width: 100%;
+  border-radius: 10px;
+}
+main #listing .accordion {
+  font-family: "Varela Round";
+  background: none;
+  color: #24231f;
+  padding: 15px;
+  margin: -10px 0 10px 0;
+  font-size: 1.3rem;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+main #listing .accordion::after {
+  content: "+";
+  float: right;
+}
+main #listing .active, main #listing .accordion:hover {
+  cursor: pointer;
+}
+main #listing .active::after {
+  content: "–";
+  float: right;
+}
+main #listing .panel {
+  padding: 0 20px;
+  line-height: 2.5;
+  margin-bottom: 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+main #listing .panel .label {
+  background: rgb(187, 219, 226);
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: white;
+}
+main #listing .img-container {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  margin-bottom: 4rem;
+}
+main #listing .img-container img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+main #listing .img-container img:hover {
+  transform: scale(105%);
+}
+
+/*# sourceMappingURL=style.css.map */
